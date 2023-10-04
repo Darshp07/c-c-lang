@@ -1,0 +1,26 @@
+// this is my first c pogram
+
+int main(){
+    // print name
+     
+     
+      printf("darshak patel");
+
+
+      //print age
+      int age;
+      printf("enter your age: ");
+      scanf("%d",&age);
+      printf("your age is %d\n",age);
+
+
+      // print my birthday 
+      int day,month,year;
+      printf("enter you bithday: ");
+      scanf("%d %d %d", &day ,&month,&year);
+      printf("your bithday is %d/%d/%d", day,month,year);
+
+      //  Address
+
+      printf("333/gopal nager,piyush point, pandesra, surat");
+ }

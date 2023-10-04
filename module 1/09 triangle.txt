@@ -1,0 +1,11 @@
+#include <stdio.h>
+// area of triangle
+int main() {
+    int s,a;
+    printf("enter your number: ");
+    scanf("%d",&s);
+    a=3*s;
+    printf("area of triangle= %d",a);
+
+    return 0;
+}

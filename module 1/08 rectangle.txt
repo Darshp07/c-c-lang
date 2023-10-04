@@ -1,0 +1,11 @@
+#include <stdio.h>
+// area of reactangle
+int main() {
+    int l,b,a;
+    printf("enter your number: ");
+    scanf("%d %d",&l,&b);
+    a=l+b+l+b;
+    printf("area of reactangle= %d",a);
+
+    return 0;
+}

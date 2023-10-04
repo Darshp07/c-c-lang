@@ -1,0 +1,22 @@
+#include <stdio.h>
+// find the leap year
+int main(){
+// convert years to days
+
+int year;
+printf("enter your year: ");
+scanf("%d",&year);
+int days=year*365;
+printf("your days is : %d\n",days);
+
+
+//convert days to years
+float Days;
+
+printf("enter your days: ");
+scanf("%f",&Days);
+float Year = Days/365;
+printf("yours year is : %f\n",Year);
+
+    return 0;
+}

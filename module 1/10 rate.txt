@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(){
+// simple interest
+float amount,rate,time;
+printf("enter your amount:   ");
+scanf("%f %f %f" ,&amount,&rate, &time);
+float intrest=amount*rate*time/100;
+printf("your intrest rate is :%f\n", intrest);
+
+    return 0;
+}

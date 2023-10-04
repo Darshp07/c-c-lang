@@ -1,0 +1,11 @@
+#include <stdio.h>
+// area of circle
+int main() {
+    float r,a;
+    printf("enter your number: ");
+    scanf("%f",&r);
+    a=3.14*r*r;
+    printf("area of circle= %.2f",a);
+
+    return 0;
+}
