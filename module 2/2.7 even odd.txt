@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+
+int num;
+printf("enter you num: ");
+scanf("%d",&num);
+(num%2==0)?printf("your num is even"):printf("your num is odd");
+
+
+    return 0;
+}

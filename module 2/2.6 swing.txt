@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+
+int a,b;
+printf("enter your num; ");
+scanf("%d %d",&a,&b);
+a=a+b;
+b=a-b;
+a=a-b;
+printf("your a num1=%d\n your b num2 = %d",a,b);
+
+
+
+    return 0;
+}

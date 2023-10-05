@@ -1,0 +1,28 @@
+/*
+   *
+  ***
+ *****
+*******
+
+*/
+#include <stdio.h>
+
+int main() {
+    printf("This is a pattern programs : \n");
+    int r = 1, end = 5;
+    for(r; r<=end; r += 1){
+        for(int c = 1; c<=(end)-(r); c += 1){
+            printf("   ", c);
+            // printf("  ", c);
+        }
+        for(int c = 1; c<=r; c += 1){
+            printf(" *", c);
+            // printf("  ", c);
+        }
+        for(int c = 1; c<=r-1; c += 1){
+            printf(" *", c);
+        }
+        printf("\n");
+        printf("\n");
+    }
+}
