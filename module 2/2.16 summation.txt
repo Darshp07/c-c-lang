@@ -8,7 +8,9 @@ int main() {
     scanf("%d", &n);
 
     for (int i = 1; i <= n; i++) {
+        int i = n % 10;
         sum += i;
+      n /= 10;
     }
 
     printf("The summation  numbers is  %d.\n", sum);
