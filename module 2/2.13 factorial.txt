@@ -6,6 +6,13 @@ int main()
   scanf("%d",&number);    
     for(i=1;i<=number;i++){    
       fact=fact*i;    
+/* 
+f =1 * 1 =1
+f=1*2=2
+f=2*3=6
+f=6*4=24
+f=24*5=120
+   */   
   }    
   printf("Factorial of %d is: %d",number,fact);    
 return 0;  
