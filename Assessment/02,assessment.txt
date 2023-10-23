@@ -1,0 +1,124 @@
+#include <iostream>
+#include <string>
+#include <ctime>
+using namespace std;
+
+class BankAccount {
+private:
+    string accountHolder;
+    double balance;
+
+public:
+    BankAccount(const string& holder, double initialBalance) : accountHolder(holder), balance(initialBalance) {
+        cout << "Account for " << accountHolder << " created with an initial balance of " << balance << endl;
+    }
+
+    void checkBalance() {
+        cout << "Account balance for " << accountHolder << " is " << balance << endl;
+    }
+
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            cout << "$" << amount << " deposited successfully.\n New balance is " << balance << endl;
+        } else {
+            cout << "Invalid deposit amount." << endl;
+        }
+    }
+
+    void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            cout << "$" << amount << " withdrawn successfully. New balance is " << balance << endl;
+        } else {
+            cout << "Invalid withdrawal amount or insufficient balance." << endl;
+        }
+    }
+};
+
+int main() {
+    cout << "****************** Welcome to ATM *******************\n" << endl;
+
+    time_t currentTime = time(nullptr);
+    string currentTimeString = ctime(&currentTime);
+    cout << "Current time and date: " << currentTimeString;
+    cout << "\n**********************************************\n" << endl;
+
+    int a;
+    cout << "Enter your number 1 to 25: ";
+    cin >> a;
+
+    if (a>=1 && a<=25) {
+        int actualPin;
+        cout << "generate your ATM PIN: ";
+        cin >> actualPin;
+
+        string name;
+        cout << "Enter your name: ";
+        cin >> name;
+
+        int maxAttempts = 1;
+
+        for (int attempts = 0; attempts < maxAttempts; attempts++) {
+            int enteredPin;
+            cout << "Enter your ATM PIN : ";
+            cin >> enteredPin;
+
+            if (enteredPin == actualPin) {
+                cout << "PIN is correct. Welcome to your account!" << endl;
+                break;
+            } else {
+                cout << "Incorrect PIN. Please try again." << endl;
+            }
+
+            if (attempts == maxAttempts - 1) {
+                cout << "Maximum attempts reached. Your account is locked." << endl;
+                return 1; // Exit the program if the maximum attempts are reached.
+            }
+        }
+
+        double initialBalance;
+        cout << "Enter your initial balance: $";
+        cin >> initialBalance;
+
+        BankAccount account(name, initialBalance);
+
+        int choice;
+        do {
+            cout << "\nSelect an option:\n";
+            cout << "1. Check Balance\n";
+            cout << "2. Deposit Money\n";
+            cout << "3. Withdraw Money\n";
+            cout << "4. Exit\n";
+            cout << "Enter your choice: ";
+            cin >> choice;
+
+            switch (choice) {
+                case 1:
+                    account.checkBalance();
+                    break;
+                case 2:
+                    double depositAmount;
+                    cout << "Enter the deposit amount: $";
+                    cin >> depositAmount;
+                    account.deposit(depositAmount);
+                    break;
+                case 3:
+                    double withdrawAmount;
+                    cout << "Enter the withdrawal amount: $";
+                    cin >> withdrawAmount;
+                    account.withdraw(withdrawAmount);
+                    break;
+                case 4:
+                    cout << "Thank you for using the ATM Banking Application. Goodbye!" << endl;
+                    break;
+                default:
+                    cout << "Invalid choice. Please try again." << endl;
+            }
+        } while (choice != 4);
+    } else {
+        cout << "Valid choice" << endl;
+    }
+
+    return 0;
+}
