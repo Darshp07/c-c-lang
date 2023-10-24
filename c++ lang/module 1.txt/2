@@ -1,0 +1,17 @@
+//What is object-oriented programming?
+
+//Object-oriented programming (OOP) is a computer programming model that organizes software design around data,
+ or objects, rather than functions and logic. An object can be defined as a data field that has unique 
+ attributes and behavior.
+
+//List OOP concepts 
+
+1. Classes and Objects:
+2.Encapsulation:
+3.Abstraction:
+4.Inheritance: 
+5.Polymorphism:
+6.Method Overloading:
+7.Method Overriding:
+8.Constructors and Destructors:
+9.abstraction

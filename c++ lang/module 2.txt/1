@@ -1,0 +1,53 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+    class calculater {
+        public:
+        float add(float a, float b){
+            return a+b;
+        }
+         float subt(float a, float b){
+            return a-b;
+        }
+         float multi(float a, float b){
+            return a*b;
+        }
+         float divi(float a, float b){
+            return a/b;
+        }
+        
+
+    };
+ int main(){
+        float a,b;
+        int c;
+        cout<<"enter your a:"<<endl;
+        cin>>a;
+        cout<<"enter your b:"<<endl;
+        cin>>b;
+        cout<<"choice your number between 1 to 4\n (1) add\n (2) subt\n (3)multi\n(4) divi \n you choice:"<<endl;
+        cin>>c;
+             calculater c1;
+        switch (c){
+            case 1:
+            cout<<"\nadd"<<c1.add(a,b);
+                break;
+        case 2:
+            cout<<"\n Subtraction: "<<c1.subt(a,b)<<endl;
+            break;
+        case 3:
+            cout<<"\n Multiplication: "<<c1.multi(a,b)<<endl;
+            break;
+        case 4:
+            cout<<"\n Division: "<<c1.divi(a,b)<<endl;
+            break;
+        default:
+            cout<<"\nPlease Enter Valid Input In 1-4"<<endl;
+        }
+        
+        
+ 
+
+    return 0;
+}

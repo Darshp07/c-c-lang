@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+
+inline float multiply(float a, float b) {
+    return a * b;
+}
+
+inline float cube(float a) {
+    return a * a * a;
+}
+
+int main() {
+    float num;
+    
+    cout << "Enter a number: ";
+    cin >> num;
+
+   
+    float product = multiply(num, 2);
+
+   
+    float cubed = cube(num);
+
+    cout << "Multiplication value of " << num<< " and 2: " << product<< endl;
+    cout << "Cubic value of " << num << ": " << cubed << endl;
+
+    return 0;
+}

@@ -1,0 +1,60 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class BankAccount {
+private:
+    string depositorName;
+    string accountNumber;
+    string accountType;
+    double balance;
+
+public:
+    
+    BankAccount(const string& name, const string& accNumber, const string& accType, double initialBalance) {
+        depositorName = name;
+        accountNumber = accNumber;
+        accountType = accType;
+        balance = initialBalance;
+    }
+
+    
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            cout << "Amount $" << amount << " deposited successfully." << endl;
+        } else {
+            cout << "Invalid deposit amount." << endl;
+        }
+    }
+
+    
+    void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            cout << "Amount $" << amount << " withdrawn successfully." << endl;
+        } else {
+            cout << "Invalid withdrawal amount or insufficient balance." << endl;
+        }
+    }
+
+    
+    void displayInfo() {
+        cout << "Depositor Name: " << depositorName << endl;
+        cout << "Account Number: " << accountNumber << endl;
+        cout << "Account Type: " << accountType << endl;
+        cout << "Balance: $" << balance << endl;
+    }
+};
+
+int main() {
+    
+    BankAccount myAccount("darshak patel", "1234567890", "Savings", 1000.0);
+
+ 
+    myAccount.deposit(500.0);
+    myAccount.withdraw(200.0);
+  myAccount.displayInfo();
+
+    return 0;
+}
