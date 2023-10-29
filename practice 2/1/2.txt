@@ -1,0 +1,14 @@
+//Print the ASCII Value of the Character
+
+#include <stdio.h>
+
+int main() {
+ int letter;
+ 
+    printf("enter your letter: ");
+    scanf("%d",&letter);
+    
+    printf("%d");
+
+    return 0;
+}

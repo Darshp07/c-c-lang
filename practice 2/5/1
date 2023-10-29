@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int originalArray[5] = {1, 2, 4, 5, 6};
+    int newArray[6];
+
+    int elementToInsert = 3; 
+    int positionToInsert = 2; 
+    int originalArraySize = 5;
+
+    printf("odd array is 1, 2, 4, 5, 6 \n ");
+    for (int i = 0; i < positionToInsert; i++) {
+        newArray[i] = originalArray[i];
+       
+    }
+    newArray[positionToInsert] = elementToInsert;
+    for (int i = positionToInsert; i < originalArraySize; i++) {
+        newArray[i + 1] = originalArray[i];
+    }
+    printf("New array after inserting the element:\n");
+    for (int i = 0; i < originalArraySize + 1; i++) {
+        printf("%d ", newArray[i]);
+    }
+    return 0;
+}

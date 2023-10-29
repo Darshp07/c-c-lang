@@ -1,0 +1,21 @@
+//  Program for Finding Greater Between Two Number
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int a,b;
+    printf("enter your a: ");
+    scanf("%d",&a);
+ printf("enter your b: ");
+    scanf("%d",&b);
+     
+     printf("you a=%d \nyour b= %d\n",a,b);
+     printf("your max number is ");
+     if(a>b){
+         printf("%d ",a);
+     }else{
+         printf("%d ",b);
+     }
+
+    return 0;
+}

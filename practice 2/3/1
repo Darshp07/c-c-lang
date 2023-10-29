@@ -1,0 +1,14 @@
+//  C Program to Reverse a Number Using FOR Loop
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    // when b is lagr num 
+    printf("enter your num a and b :");
+    scanf("%d %d",&a,&b);
+    for(int i=b;i>=a;i--){
+        printf("%d\n",i);
+    }
+
+    return 0;
+}s

@@ -1,0 +1,35 @@
+int main() {
+    int a,b,c;
+    printf("enter num a :");
+    scanf("%d",&a);
+    
+    printf("enter num b :");
+    scanf("%d",&b);
+    
+    printf("choice a num \n (1) addition \n (2) subtraction \n (3) multiplication \n (4) dividion \n (5) modulo \n choice your number; ");
+    scanf("%d",&c);
+    
+  
+  switch (c){
+      case 1:
+      printf("\n addition of a and b %d" ,(a+b ));
+    break;
+    case 2:
+      printf("\n subtract of a and b %d" ,(a-b ));
+    break;
+    
+    case 3:
+      printf("\n multipal of a and b %d" ,(a*b ));
+    break;
+    case 4:
+      printf("\n divition of a and b %d" ,(a/b ));
+    break;
+    case 5:
+      printf("\n modulo of a and b %d" ,(a%b ));
+    break;
+     default:
+            printf("\nInvalid Input");
+  }
+
+    return 0;
+}

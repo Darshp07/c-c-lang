@@ -1,0 +1,19 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+
+    // Checking Whether You Are Eligible for Voting or Not
+    int age;
+    printf("enter your age: ");
+    scanf("%d",&age);
+    if(age<18){
+        printf("your not eligible for vote");
+    }
+     else {
+        printf("you eligible for vote");
+    }
+    
+
+    return 0;
+}

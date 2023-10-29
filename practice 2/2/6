@@ -1,0 +1,14 @@
+//  Leap Year Program in C with Logic, Explanation and Output
+#include <stdio.h>
+
+int main() {
+    int year;
+    printf("enter you year;");
+    scanf("%d",&year);
+    if(year%4==0 || year%100==0 || year%400==0){
+        printf("your year is leap year");
+    }else {
+        printf("your year is not leap year");
+    }
+    return 0;
+}
